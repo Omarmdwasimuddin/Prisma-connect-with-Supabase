@@ -26,8 +26,11 @@ npx prisma init
 ![](https://imgur.com/LPN7bu9.png)
 ![](https://imgur.com/PnewSZ3.png)
 
-###
+### Migration and prisma client generated
 ```terminal
 npx prisma migrate dev --name init
+```
+```terminal
+npx prisma generate
 ```
 ---
