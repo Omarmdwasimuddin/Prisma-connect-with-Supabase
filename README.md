@@ -22,5 +22,5 @@ npx prisma init
 ### Visit supabase.com --->go: dashboard --->click: New project --->set Project name & Database password--->click: Create new project
 ![](https://imgur.com/Tqumq5m.png)
 
-### 
+### click: Connect --->Select: ORM ---> 
 ![](https://imgur.com/LPN7bu9.png)
