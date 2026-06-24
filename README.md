@@ -6,3 +6,8 @@
 ```terminal
 npm install prisma tsx @types/pg --save-dev
 ```
+
+#### Production dependencies:
+```terminal
+npm install @prisma/client @prisma/adapter-pg dotenv pg
+```
