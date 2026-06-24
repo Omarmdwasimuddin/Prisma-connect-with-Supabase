@@ -1,4 +1,4 @@
-## Prisma-connect-with-Supabase
+## Prisma Connect with Supabase for NextJS
 
 ### Prisma Dependencies Install
 
