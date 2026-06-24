@@ -43,32 +43,22 @@ npx prisma generate
 ![](https://imgur.com/dhgM3BI.png)
 
 ### Create Inistance for API
-![]()
+![](https://imgur.com/0xO90A5.png)
 ```code
-import prisma from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { PrismaClient } from "@/app/generated/prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 
+const globalForPrisma = global as unknown as { 
+    prisma: PrismaClient;
+ };
 
-export async function POST(request:Request) {
-    try {
-        const json = await request.json();
-        const { email, name } = json;
+ const adapter = new PrismaPg({
+    connectionString: process.env.DATABASE_URL,
+ });
 
-        const newUser = await prisma.user.create({
-            data: json,
-        })
+ const prisma = globalForPrisma.prisma || new PrismaClient({ adapter, });
 
-        return NextResponse.json(
-            {status: "success", data: newUser},
-            {status: 200}
-        )
+ if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 
-    } catch (error) {
-        console.log("User Create error:", error)
-        return NextResponse.json(
-            {status: "Error", message: "Internal server error"},
-            {status: 500}
-        )
-    }
-}
+ export default prisma;
 ```
