@@ -18,3 +18,5 @@ npm install @prisma/client @prisma/adapter-pg dotenv pg
 npx prisma init 
 ```
 ---
+
+### Visit supabase.com --->go: dashboard --->click: New project --->
