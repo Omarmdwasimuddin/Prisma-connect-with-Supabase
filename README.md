@@ -96,4 +96,4 @@ export async function POST(request:Request) {
 ### Postman
 ![](https://imgur.com/SzCFNfg.png)
 ### Supabase
-![]()
+![](https://imgur.com/Y1Q0WFB.png)
